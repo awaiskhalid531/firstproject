@@ -1,0 +1,32 @@
+<h2>Users</h2>
+
+<%= link "Create User", to: Routes.user_path(@conn, :new), class: "btn btn-success" %>
+
+<table style="width:100%">
+
+<tbody>
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th> </th>
+  </tr>
+
+  <%= for user <- @users do %>
+  <tr>
+
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td>
+        <%= link "Show", to: Routes.user_path(@conn, :show, user.id), class: "btn btn-default" %> |
+        <%= link "Edit", to: Routes.user_path(@conn, :edit, user.id), class: "btn btn-default" %> |
+        <%= link "Delete", to: Routes.user_path(@conn, :delete, user.id), method: :delete, class: "btn btn-default" %>
+    </td>
+  </tr>
+  <% end %>
+  <tr>
+
+</tr>
+
+</tbody>
+</table>
+

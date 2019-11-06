@@ -1,0 +1,19 @@
+<h2>User</h2>
+
+<table>
+<tbody >
+<tr >
+
+<td style="text-align: center">ID : <%= @userfrm_db.id %></td>
+
+<tr >
+<td style="text-align: center">Name : <%= @userfrm_db.name %></td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+<%= link "index", to: Routes.user_path(@conn, :index), class: "btn btn-default" %>
